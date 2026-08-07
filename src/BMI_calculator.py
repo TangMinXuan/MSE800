@@ -5,8 +5,7 @@ BMI = weight (kg) / height (m)^2
 """
 
 class BMICalculator:
-    @staticmethod
-    def calculate_bmi(weight, height):
+    def calculate_bmi(self, weight, height):
         if height <= 0:
             raise ValueError("Height must be greater than 0")
         if weight <= 0:
@@ -15,8 +14,7 @@ class BMICalculator:
         bmi = weight / (height ** 2)
         return bmi
 
-    @staticmethod
-    def main():
+    def guidance(self):
         print("=" * 50)
         print("Welcome to the BMI Calculator!")
         print("=" * 50)
@@ -24,7 +22,7 @@ class BMICalculator:
         try:
             weight = float(input("\nEnter your weight in kilograms (kg): "))
             height = float(input("Enter your height in meters (m): "))
-            bmi = BMICalculator.calculate_bmi(weight, height)
+            bmi = self.calculate_bmi(weight, height)
 
 
             # Display results using f-strings
@@ -42,4 +40,5 @@ class BMICalculator:
 
 
 if __name__ == "__main__":
-    BMICalculator.main()
+    calculator = BMICalculator()
+    calculator.guidance()
