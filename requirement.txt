@@ -1,0 +1,1 @@
+I install freeze via pip, instead of Anaconda/Miniconda. Currently Standard Library is in used, so no content here right now.
